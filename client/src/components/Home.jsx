@@ -1,8 +1,11 @@
 import React from 'react'
+import {Segment} from "semantic-ui-react";
 
 const Home = () => {
   return (
-    <div>Welcome To Home Page</div>
+    <Segment>
+    <h1>React Admin Dashboard</h1>
+  </Segment>
   )
 }
 

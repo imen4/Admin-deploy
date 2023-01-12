@@ -1,4 +1,4 @@
-import {GET_CONTACTS_LOAD,GET_CONTACTS_FAIL,GET_CONTACTS_SUCCESS,GET_CONTACT , EDIT_CONTACT} from "../constant/actionTypes";
+import {GET_CONTACTS_LOAD,GET_CONTACTS_FAIL,GET_CONTACTS_SUCCESS,GET_CONTACT} from "../constant/actionTypes";
 
 const initialState = {
     contacts:[],

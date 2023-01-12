@@ -1,31 +1,39 @@
-import { useDispatch } from "react-redux";
-import {Link , Route , Routes} from "react-router-dom";
 import './App.css';
-import ContactList from "./components/ContactList";
+import {Route, Routes} from 'react-router-dom'
+import ContactList from './components/ContactList'
+import Home from './components/Home'
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import EditAdd from "./components/EditAdd";
-import Home from "./components/Home"
-import { toggleFalse } from "./JS/action/editAction";
-
+import ProductList from "./components/ProductList"
+import ProductEditAdd from "./components/ProductEditAdd"
 
 function App() {
-  const dispatch = useDispatch();
   return (
-    <div>
-      <Link to="/">
-      <button>Home</button>
-      </Link>
-      <Link to="/contact_list">
-      <button>Contact List</button>
-      </Link>
-      <Link to="/add">
-      <button onClick={()=>dispatch(toggleFalse())} >Add Contact</button>
-      </Link>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact_list" element={<ContactList />} />
-        <Route path="/edit/:id" element={<EditAdd />} />
-        <Route path="/add" element={<EditAdd />} />
-      </Routes>
+    <div >     
+      <Header/>
+
+      <div className="ui attached pushable" style={{height: '100vh'}}>
+          <Sidebar />
+          <div style={{margin:"10px 50vh"}}>
+          
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/contact_list' element={<ContactList/>}/>
+            <Route path="/edit/:id" element={<EditAdd />} />
+            <Route path="/add" element={<EditAdd />} />
+
+            <Route path='/product_list' element={<ProductList/>}/>
+            <Route path="/editproduct/:id" element={<ProductEditAdd />} />
+            <Route path="/addproduct" element={<ProductEditAdd />} />
+         </Routes>
+        
+          </div>
+        </div>
+        
+        
+
+      
     </div>
   );
 }

@@ -4,6 +4,7 @@ require("dotenv").config({path:"./config/.env"});
 const connectDB = require("./config/connectDB")
 
 const contactRouter = require('./Routes/contactRoutes')
+const produitRouter = require('./Routes/produitRoutes')
 
 const app = express();
 connectDB()
@@ -12,6 +13,7 @@ connectDB()
 //middleware
 app.use(express.json())
 app.use('/api/contact',contactRouter)
+app.use('/api/product',produitRouter)
 
 const PORT = process.env.PORT || 8000;
 
