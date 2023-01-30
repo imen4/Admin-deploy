@@ -30,7 +30,7 @@ const ProductEditAdd = () => {
   }
 
 return (
-  <Form >
+  <Form style={{ maxWidth: 500}}>
   <Form.Field>
     <label>Name</label>
     <input placeholder='Name'value={product.name} name='name'  onChange={handleChange} />

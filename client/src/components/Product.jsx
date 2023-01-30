@@ -8,7 +8,7 @@ import { editTrue } from '../JS/action/poductEditAction';
 const Product = ({product}) => {
   const dispatch = useDispatch()
   return (
-    <Card style={{margin:"10px", display:"flex" }}>
+    <Card style={{ maxWidth: 200, margin: "10px" }}>
     <Card.Content>
       <Image
         floated='right'

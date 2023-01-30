@@ -15,7 +15,7 @@ const ProductList = () => {
       //eslint-disable-next-line
     },[])
     return (
-      <div >
+      <div style={{display:"flex",flexWrap:"wrap"}}>
         {loadProducts ? (
           <h2>loading........</h2>
         ):products.length === 0 ? (<h2>there is no product</h2>)

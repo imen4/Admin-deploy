@@ -17,14 +17,15 @@ const ContactList = () => {
   return (
     <div>{loadContacts?(<h2>Loading...</h2>):contacts.lenght===0?(<h2>There is no contacts</h2>):
     (
-    <Segment>
+    <Segment style={{width:"1000px"}}>
         <Header>Registered Users</Header>
         <Table compact celled>
           <Table.Header fullWidth>
             <Table.Row>
               <Table.HeaderCell>Name</Table.HeaderCell>
+              <Table.HeaderCell>Lastname</Table.HeaderCell>
               <Table.HeaderCell>Email</Table.HeaderCell>
-              <Table.HeaderCell>Phone</Table.HeaderCell>
+              <Table.HeaderCell>Password</Table.HeaderCell>
               <Table.HeaderCell width={2}>Actions</Table.HeaderCell>
             </Table.Row>
           </Table.Header>

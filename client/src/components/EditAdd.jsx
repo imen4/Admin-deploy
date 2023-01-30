@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom'
 
 const EditAdd = () => {
   const dispatch = useDispatch();
-  const [user , setUser] = useState({name:'',email:'',phone:''})
+  const [user , setUser] = useState({name:'', lastName:'',email:'',password:''})
   const userReducer = useSelector(state=>state.contactReducer.user)
 
   const edit = useSelector(state=>state.editReducer.edit)
 
   useEffect(()=>{
-      edit? setUser(userReducer) : setUser({name:'',email:'',phone:''})
+      edit? setUser(userReducer) : setUser({name:'',lastName:'',email:'',password:''})
   },[userReducer , edit])
 
   const handleContact = ()=>{
@@ -30,18 +30,22 @@ const EditAdd = () => {
   }
 
 return (
-  <Form >
+  <Form style={{ maxWidth: 500}}>
   <Form.Field>
     <label>Name</label>
     <input placeholder='Name'value={user.name} name='name'  onChange={handleChange} />
+  </Form.Field>
+  <Form.Field>
+    <label>Last name</label>
+    <input placeholder='lastName' value={user.lastName} name='lastName'  onChange={handleChange}/>
   </Form.Field>
   <Form.Field>
     <label>Email</label>
     <input placeholder='Email' value={user.email} name='email'  onChange={handleChange}/>
   </Form.Field>
   <Form.Field>
-    <label>Phone</label>
-    <input placeholder='Phone' value={user.phone} name='phone'  onChange={handleChange}/>
+    <label>Password</label>
+    <input placeholder='Password' value={user.password} name='password'  onChange={handleChange}/>
   </Form.Field>
   <Link to="/contact_list"> <Button onClick={handleContact}> {edit ? "Edit" : "Save"} </Button></Link>
 </Form>

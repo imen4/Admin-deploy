@@ -10,8 +10,9 @@ const Contact = ({contact}) => {
   return (
     <Table.Row>
         <Table.Cell>{contact.name}</Table.Cell>
+        <Table.Cell>{contact.lastName}</Table.Cell>
         <Table.Cell>{contact.email}</Table.Cell>
-        <Table.Cell>{contact.phone}</Table.Cell>
+        <Table.Cell>{contact.password}</Table.Cell>
         <Table.Cell>
         <Link to={`/edit/${contact._id}`} >
           <Button  size="mini" icon onClick={()=>{dispatch(getContact(contact._id)); dispatch(toggleTrue())} }>

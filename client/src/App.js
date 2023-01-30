@@ -15,7 +15,7 @@ function App() {
 
       <div className="ui attached pushable" style={{height: '100vh'}}>
           <Sidebar />
-          <div style={{margin:"10px 50vh"}}>
+          <div style={{margin:"10px 0 10px 50vh "}}>
           
           <Routes>
             <Route path='/' element={<Home/>} />
