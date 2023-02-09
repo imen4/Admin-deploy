@@ -4,6 +4,7 @@ import {toggleFalse} from "../JS/action/editAction";
 import {useDispatch} from "react-redux";
 import { Button } from 'semantic-ui-react'
 import {editFalse} from "../JS/action/poductEditAction";
+import {commandEditFalse} from "../JS/action/commandEditAction";
 
 function Sidebar(props) {
   const dispatch = useDispatch()
@@ -24,6 +25,13 @@ function Sidebar(props) {
       </Link></li>
       <li className="item link"><Link to="/addproduct">
       <Button primary onClick={()=>dispatch(editFalse())} >Add Product</Button>
+      </Link></li>
+
+      <li className="item link">  <Link to="/command_list">
+      <Button primary>Command List</Button>
+      </Link></li>
+      <li className="item link"><Link to="/addcommand">
+      <Button primary onClick={()=>dispatch(commandEditFalse())} >Add Command</Button>
       </Link></li>
     </ul>
     </div>
