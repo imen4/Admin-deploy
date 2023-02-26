@@ -1,20 +1,20 @@
 {
-  "name": "rest-api",
+  "name": "crud-mern-app",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./backend/server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd ./backend && npm start"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imen4/partie1-Admin.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.1.0",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.8.0",
-    "nodemon": "^2.0.20"
-  }
+  "bugs": {
+    "url": "https://github.com/imen4/partie1-Admin/issues"
+  },
+  "homepage": "https://github.com/imen4/partie1-Admin#readme"
 }
